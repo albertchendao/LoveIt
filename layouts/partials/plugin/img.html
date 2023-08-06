@@ -37,8 +37,10 @@
         class="lazyload{{ with .Class }} {{ . }}{{ end }}"
         src="{{ $loading.RelPermalink }}"
         data-src="{{ $src | safeURL }}"
+    {{- /*
         data-srcset="{{ $small | safeURL }}, {{ $src | safeURL }} 1.5x, {{ $large | safeURL }} 2x"
         data-sizes="auto"
+    */ -}}
         alt="{{ $alt }}"
         title="{{ .Title | default $alt }}"
         {{- with $width }} width="{{ . }}"{{ end }}
